@@ -1,0 +1,9 @@
+
+spring:
+  cloud:
+    gateway:
+      routes:
+        -id: productModule
+        uri: lb://PRODUCT-SERVICE
+        predicates:
+            -path= */product/**
